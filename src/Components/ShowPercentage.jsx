@@ -1,0 +1,21 @@
+import React, { useContext } from "react";
+import { DataContext } from "../App";
+
+function ShowPercentage() {
+  const { todos } = useContext(DataContext);
+  const total = todos.length;
+  const trueisDone = todos.filter((item) => item.isDone === true).length;
+
+  const percent = total === 0 ? 0 : (trueisDone / total) * 100;
+
+  return (
+    <div className="w-full sm:w-1/3 flex flex-col justify-center items-center gap-4">
+      <p>{Math.round(percent)}% is done</p>
+      <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
+        <div className="bg-blue-500 h-4 transition-all duration-700 ease-out" style={{ width: `${percent}%` }} />
+      </div>
+    </div>
+  );
+}
+
+export default ShowPercentage;
