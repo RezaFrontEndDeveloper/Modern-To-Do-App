@@ -1,8 +1,8 @@
 import React from "react";
-import Input from "./Input";
-import ShowTodo from "./ShowTodo";
-import ShowTotal from "./ShowTotal";
-import ShowPercentage from "./ShowPercentage";
+import Input from "../Components/Input";
+import ShowTodo from "../Components/ShowTodo";
+import ShowTotal from "../Components/ShowTotal";
+import ShowPercentage from "../Components/ShowPercentage";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 

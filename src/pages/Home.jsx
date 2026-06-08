@@ -1,6 +1,6 @@
 import React from "react";
 import bgImage from "../assets/pexels-iamdibh-17405734.jpg";
-import Button from "./Button";
+import Button from "../Components/Button";
 
 function Home() {
   return (

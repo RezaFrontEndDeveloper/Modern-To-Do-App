@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { LiaTimesSolid } from "react-icons/lia";
 import { DataContext } from "../App";
 

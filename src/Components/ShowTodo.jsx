@@ -3,7 +3,7 @@ import { DataContext } from "../App";
 import ToDosOption from "./ToDosOption";
 
 function ShowTodo() {
-  const { todos, setTodos } = useContext(DataContext);
+  const { todos } = useContext(DataContext);
 
   return (
     <div className="flex flex-col gap-2 w-full  justify-center items-center">

@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-import Button from "./Button";
 import { DataContext } from "../App";
 
 export default function Input() {
@@ -19,7 +18,7 @@ export default function Input() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex items-center border gap-2 bg-gray-900 border-gray-500/30 h-12 max-w-md w-full rounded-full overflow-hidden">
+    <form onSubmit={handleSubmit} className="flex items-center border gap-2 bg-gray-900 dark:border-gray-500/30 h-12 max-w-md w-full rounded-full overflow-hidden">
       <input
         value={inputFild}
         onChange={(e) => setInputFild(e.target.value)}

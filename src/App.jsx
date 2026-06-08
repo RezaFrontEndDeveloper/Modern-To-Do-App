@@ -1,17 +1,14 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useState } from "react";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./Components/Home";
-import NotFound from "./Components/NotFound";
-import ToDo from "./Components/To-Do";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import ToDo from "./pages/To-Do";
 
 export const DataContext = createContext();
 
 function App() {
   const [todos, setTodos] = useState([]);
-  useEffect(() => {
-    console.log(todos);
-  }, [todos]);
 
   function handleDeleteItemFromList(id) {
     setTodos(todos.filter((item) => item.id !== id));
