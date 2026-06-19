@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
-import { DataContext } from "../App";
+import React from "react";
+
+import todoStore from "../store/TodoStore";
 
 function ShowTotal() {
-  const { todos } = useContext(DataContext);
+  const todos = todoStore((state) => state.todos) || [];
 
   return (
     <div className="flex justify-center items-center gap-4 w-full sm:w-1/2">

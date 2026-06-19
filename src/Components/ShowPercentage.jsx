@@ -1,8 +1,10 @@
-import React, { useContext } from "react";
-import { DataContext } from "../App";
+import React from "react";
+import todoStore from "../store/TodoStore";
 
 function ShowPercentage() {
-  const { todos } = useContext(DataContext);
+  const todos = todoStore((state) => state.todos) ?? [];
+  const store = todoStore();
+  console.log(store);
   const total = todos.length;
   const trueisDone = todos.filter((item) => item.isDone === true).length;
 
