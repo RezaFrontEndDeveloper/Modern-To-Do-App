@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import bgImage from "../assets/pexels-iamdibh-17405734.jpg";
 import Button from "../Components/Button";
 import { FaLinkedin } from "react-icons/fa";

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { LiaTimesSolid } from "react-icons/lia";
 
 import todoStore from "../store/TodoStore";
@@ -18,7 +18,7 @@ function ToDosOption({ work, isDone, id }) {
       <input checked={isDone} onChange={(e) => toggleTodo(id, e.target.checked)} type="checkbox" className="bg-red-700" />
       <h1 className={isDone ? "text-sm line-through text-gray-500" : ""}>{work}</h1>
 
-      <LiaTimesSolid onClick={(e) => handleDeleteItemFromList(id, e.target.checked)} className="transition text-2xl p-1 rounded-md hover:bg-red-500 text-white " />
+      <LiaTimesSolid onClick={(e) => handleDeleteItemFromList(id)} className="transition text-2xl p-1 rounded-md hover:bg-red-500 text-white " />
     </div>
   );
 }
