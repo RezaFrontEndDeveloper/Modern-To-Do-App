@@ -1,6 +1,6 @@
 import React from "react";
 
-import todoStore from "../store/TodoStore";
+import todoStore from "../store/todoStore";
 
 function ShowTotal() {
   const todos = todoStore((state) => state.todos) || [];

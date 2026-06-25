@@ -1,5 +1,5 @@
 import React from "react";
-import todoStore from "../store/TodoStore";
+import todoStore from "../store/todoStore";
 
 function ShowPercentage() {
   const todos = todoStore((state) => state.todos) ?? [];
@@ -14,7 +14,14 @@ function ShowPercentage() {
     <div className="w-full sm:w-1/3 flex flex-col justify-center items-center gap-4">
       <p>{Math.round(percent)}% is done</p>
       <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
-        <div className={percent === 100 ? "bg-green-500 h-4 transition-all duration-700 ease-out" : "bg-blue-500 h-4 transition-all duration-700 ease-out"} style={{ width: `${percent}%` }} />
+        <div
+          className={
+            percent === 100
+              ? "bg-green-500 h-4 transition-all duration-700 ease-out"
+              : "bg-blue-500 h-4 transition-all duration-700 ease-out"
+          }
+          style={{ width: `${percent}%` }}
+        />
       </div>
     </div>
   );
