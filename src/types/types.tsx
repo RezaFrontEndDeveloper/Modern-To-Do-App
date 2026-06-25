@@ -5,8 +5,8 @@ export interface Todoinput {
 }
 
 export interface State {
-  todos: Input[];
+  todos: Todoinput[];
   toggleTodo: (id: string, value: boolean) => void;
-  addTodos: (item: Input) => void;
+  addTodos: (item: Todoinput) => void;
   deleteItem: (id: string) => void;
 }
