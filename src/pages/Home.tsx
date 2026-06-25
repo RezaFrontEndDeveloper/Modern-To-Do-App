@@ -2,12 +2,9 @@ import React from "react";
 // import bgImage from "../assets/To-Do-App.jpg";
 import bgImage from "../assets/imageone.jpg";
 import Button from "../Components/Button";
-import { FaLinkedin } from "react-icons/fa";
-import { FaTelegram } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaTelegram, FaGithub } from "react-icons/fa";
 
 function Home() {
-  console.log("home");
   return (
     <div
       style={{

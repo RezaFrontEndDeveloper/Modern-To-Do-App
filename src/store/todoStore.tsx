@@ -1,17 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-interface Input {
-  id: string;
-  work: string;
-  isDone: boolean;
-}
-
-interface State {
-  todos: Input[];
-  toggleTodo: (id: string, value: boolean) => void;
-  addTodos: (item: Input) => void;
-  deleteItem: (id: string) => void;
-}
+import { State } from "../types/types";
+import { Todoinput } from "../types/types";
 
 const todoStore = create<State>()(
   persist(
@@ -26,6 +16,7 @@ const todoStore = create<State>()(
         })),
 
       addTodos: (item) => set((state) => ({ todos: [...state.todos, item] })),
+
       deleteItem: (id) =>
         set((state) => ({
           todos: state.todos.filter((item) => item.id !== id),

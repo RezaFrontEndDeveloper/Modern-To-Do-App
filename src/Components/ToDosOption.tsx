@@ -1,10 +1,9 @@
 import React from "react";
 import { LiaTimesSolid } from "react-icons/lia";
-
+import { Todoinput } from "../types/types";
 import todoStore from "../store/todoStore";
 
-function ToDosOption({ work, isDone, id }) {
-  const todos = todoStore((state) => state.todos);
+function ToDosOption({ work, isDone, id }: Todoinput) {
   const handleDeleteItemFromList = todoStore((state) => state.deleteItem);
   const toggleTodo = todoStore((state) => state.toggleTodo);
 
@@ -24,11 +23,9 @@ function ToDosOption({ work, isDone, id }) {
       <h1 className={isDone ? "text-sm line-through text-gray-500" : ""}>
         {work}
       </h1>
-
-      <LiaTimesSolid
-        onClick={(e) => handleDeleteItemFromList(id)}
-        className="transition text-2xl p-1 rounded-md hover:bg-red-500 text-white "
-      />
+      <button onClick={(e) => handleDeleteItemFromList(id)}>
+        <LiaTimesSolid className="transition text-2xl p-1 rounded-md hover:bg-red-500 text-white " />
+      </button>
     </div>
   );
 }

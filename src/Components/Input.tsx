@@ -1,16 +1,17 @@
 import { useState } from "react";
 
 import todoStore from "../store/todoStore";
+import type { Todoinput } from "../types/types";
 
 export default function Input() {
   const addTodos = todoStore((state) => state.addTodos);
-  const [inputFild, setInputFild] = useState("");
+  const [inputFild, setInputFild] = useState<string>("");
 
   function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
+    e.preventDefault();
     if (!inputFild.trim()) return;
 
-    e.preventDefault();
-    const newToDos = {
+    const newToDos: Todoinput = {
       id: crypto.randomUUID(),
       work: inputFild,
       isDone: false,
