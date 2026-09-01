@@ -5,15 +5,18 @@ import ShowTotal from "../Components/ShowTotal";
 import ShowPercentage from "../Components/ShowPercentage";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import Title from "../Components/Title";
 
 function ToDo() {
   return (
     <div className="p-4">
       <Link to="/">
-        <FaArrowLeftLong className="" />
+        <FaArrowLeftLong />
       </Link>
       <div className="flex flex-col w-full px-4 gap-10 mt-10 justify-center items-center">
-        <h1 className="text-2xl text-center sm:text-5xl ">Enter your tasks based on priority.</h1>
+        <Title className="text-2xl gont-bold">
+          Enter your tasks based on priority.
+        </Title>
         <Input />
         <ShowPercentage />
         <ShowTodo />

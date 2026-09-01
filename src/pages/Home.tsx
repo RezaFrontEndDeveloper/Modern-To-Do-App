@@ -3,6 +3,10 @@ import React from "react";
 import bgImage from "../assets/pexels-iamdibh-17405734.jpg";
 import Button from "../Components/Button";
 import { FaLinkedin, FaTelegram, FaGithub } from "react-icons/fa";
+import Social from "../Components/Social";
+import Title from "../Components/Title";
+import Paragraph from "../Components/Paragraph";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -15,37 +19,20 @@ function Home() {
       className="w-full h-screen bg-cover bg-center bg-no-repeat flex justify-center items-center"
     >
       <div className="flex flex-col justify-center items-center gap-8">
-        <h1 className="text-5xl sm:text-9xl font-bold">To-Do-App</h1>
-        <p className="text-2xl text-wrap text-center sm:text-5xl ">
-          click the start button to test my app
-        </p>
-        <Button />
-        <div className="w-full relative flex flex-col gap-8 justify-center items-center ">
-          <div className="flex gap-8 justify-center items-center">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/reza-akbari-front-end"
-            >
-              <FaLinkedin size={20} />
-            </a>
+        <Title className="text-5xl font-bold">Todo_App</Title>
+        <Paragraph>click the start button to test my app</Paragraph>
+        <Link to="/todo">
+          <Button varient="primary">Start App</Button>
+        </Link>
 
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/reza-akbari-front-end"
-            >
-              <FaTelegram size={20} />
-            </a>
+        <div className="flex justify-center items-center gap-4">
+          <Social link="https://www.linkedin.com/in/reza-akbari-front-end">
+            <FaLinkedin size={20} />
+          </Social>
 
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/RezaFrontEndDeveloper/Modern-To-Do-App"
-            >
-              <FaGithub size={20} />
-            </a>
-          </div>
+          <Social link="https://github.com/RezaFrontEndDeveloper?tab=repositories">
+            <FaGithub size={20} />
+          </Social>
         </div>
       </div>
     </div>
